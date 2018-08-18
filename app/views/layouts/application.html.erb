@@ -10,6 +10,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class='notificacoes'>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
+    <section>
+      <%= yield %>
+    </section>
+
+    <footer>
+      <p>Criado no bootcampo _Dev.Mode</p>
+    </footer>
   </body>
 </html>
