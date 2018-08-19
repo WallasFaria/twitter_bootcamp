@@ -29,4 +29,7 @@ class User < ApplicationRecord
     following.destroy(other_user)
   end
 
+  def following?(other_user)
+    following.include? other_user
+  end
 end
