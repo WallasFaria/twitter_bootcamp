@@ -21,4 +21,7 @@ class User < ApplicationRecord
                        through: :followed_relationships,
                        source: :followed
 
+  def follow!(other_user)
+    following << other_user
+  end
 end
