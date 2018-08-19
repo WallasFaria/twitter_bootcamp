@@ -24,4 +24,9 @@ class User < ApplicationRecord
   def follow!(other_user)
     following << other_user
   end
+
+  def unfollow!(other_user)
+    following.destroy(other_user)
+  end
+
 end
